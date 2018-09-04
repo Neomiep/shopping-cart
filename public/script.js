@@ -3,7 +3,7 @@ var ShoppingCart = function () {
   // an array with all of our cart items
   var cart = [];
 
-  var updateCart = function () {
+  var renderCart = function () {
     // TODO: Write this function. In this function we render the page.
     // Meaning we make sure that all our cart items are displayed in the browser.
     // Remember to empty the "cart div" before you re-add all the item elements.
@@ -20,7 +20,7 @@ var ShoppingCart = function () {
   }
   
   return {
-    updateCart: updateCart,
+    renderCart: renderCart,
     addItem: addItem,
     clearCart: clearCart
   }
@@ -29,7 +29,7 @@ var ShoppingCart = function () {
 var app = ShoppingCart();
 
 // update the cart as soon as the page loads!
-app.updateCart();
+app.renderCart();
 
 
 //--------EVENTS---------
@@ -41,7 +41,7 @@ $('.view-cart').on('click', function () {
 $('.add-to-cart').on('click', function () {
   // TODO: get the "item" object from the page
   app.addItem(item);
-  app.updateCart();
+  app.renderCart();
 });
 
 $('.clear-cart').on('click', function () {
